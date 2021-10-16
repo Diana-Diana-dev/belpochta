@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+img {
+	width: 100%;
+}
+body {
+	width: 1080px;
+  	height: 100vh;
+  	margin: 0 auto;
+  	position: relative;
+}
+a{
+	text-decoration: none;
+}
+
+
+.header {
+	/*position: fixed;*/
+	width: 1080px;
+	height: 73px;
+	background: #009DE9;
+	
+}
+
+.main {
+
+}
+
+/* сам слайдер */
+.slider{
+	position: relative;
+    width: 100%;  
+    height: 608px;
+}
+.slider__item1 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+    height: 608px;
+    background: url('../img/Group_2451.svg') center/95%  no-repeat,
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(71, 145, 209, 0) 56.77%, rgba(255, 255, 255, 0.72) 100%), radial-gradient(66.43% 109.46% at 50% 50%, #009DE9 0%, #4D74B8 55.21%); 
+   
+}
+.slider__item2 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+    height: 608px;
+    background: url('../img/Group_2451.svg') center/95%  no-repeat,
+	linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(71, 145, 209, 0) 56.77%, rgba(255, 255, 255, 0.72) 100%), radial-gradient(66.43% 109.46% at 50% 50%, #00E9CD 0%, #4D7EB8 55.21%);
+}
+
+.slider__item_logo {
+	margin-top: 191px;
+	width: 545.17px;
+	height: 193.36px;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    position: absolute;
+    top: 50%;
+    margin-left: 20px;
+    width: 71px;
+    height: 71px;
+    background: rgba(0, 0, 0, 0.35);
+    margin-top: -35px;
+    border-radius: 50%;
+    display: block;
+ }   
+.slider .prev::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	left: 50%;
+	margin-left: -6px;
+	text-align: center;
+	border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+	transform: rotate(135deg);
+	width: 16px;
+	height: 16px;
+	top: 50;
+}    
+ 
+.slider .next {
+    right: 0;
+    margin-right: 20px;
+}
+.slider .next::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	left: 50%;
+	margin-left: -10px;
+	text-align: center;
+	border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+	transform: rotate(-45deg);
+	width: 16px;
+	height: 16px;
+	top: 50;
+} 
+
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
