@@ -46,7 +46,7 @@ function getPageContent() {
 function getPageContent1() {
 	home.innerHTML = `<section class="second-menu" >
 				<div class="second-menu_flex">
-					<a id="homelink" class="homelink" href="#" onclick="home()"></a>
+					<a  href="#" onclick="home()" id="homelink" class="homelink"></a>
 					<h3 class="second-menu__h3">Страница 1</h3>
 					<a id="back" class="back" href="#" onclick="goBack()"></a>
 				</div>	
@@ -56,10 +56,39 @@ function getPageContent1() {
 }	
 
 function goBack() {
-	window.history.back()
+	home.innerHTML = `<section class="main-menu" id="home">
+				<div class="main-menu__row1">
+					<a href="#" onclick="getPageContent()" class="main-menu__block">
+						<h3 class="main-menu__block_text">АДМИНИСТРАТИВНЫЕ ПРОЦЕДУРЫ</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon_1.png" alt="icon">
+						</div>
+					</a>
+					<a href="#" class="main-menu__block">
+						<h3 class="main-menu__block_text">РУКОВОДСТВО</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon_2.png" alt="icon">
+						</div>
+					</a>
+					<a href="#" class="main-menu__block">
+						<h3 class="main-menu__block_text">ГРАФИК ПРИЁМА</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon_3.png" alt="icon">
+						</div>
+					</a>
+				</div>
+				<div class="main-menu__row2">
+					<a href="#" class="main-menu__block">
+						<h3 class="main-menu__block_text">СТРУКТУРА</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon_4.png" alt="icon">
+						</div>
+					</a>
+				</div>
+			</section>`
 }
-function home() {
-	
+
+	function home() {
 	home.innerHTML = `<section class="main-menu" id="home">
 				<div class="main-menu__row1">
 					<a href="#" onclick="getPageContent()" class="main-menu__block">

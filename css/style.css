@@ -190,16 +190,17 @@ a{
 .main-menu {
 	display: block;
 	width: 1080px;
-	height: 1069px;
+	height: 1129px;
 	background: url('../img/fon_main_menu.png') 0 0/ 100% no-repeat;
 	
 }
 .second-menu {
 	
 	width: 1080px;
-	height: 1069px;
+	height: 1129px;
 	background: url('../img/fon_second_menu.png') 0 0/ 100% no-repeat;
 	padding-top: 15px;
+	/*padding-bottom: 60px;*/
 }
 .second-menu_flex {
 	display: flex;
@@ -288,7 +289,7 @@ a{
 	font-feature-settings: 'tnum' on, 'lnum' on;
 	color: #2B2E2D;
 	text-align: right;
-	margin: 60px 20px 0 0;
+	margin: 60px 20px 0 20px;
 }
 .main-menu__block_icon {
 	width: 80px;
@@ -305,7 +306,7 @@ a{
 	width: 1080px;
 	height: 110px;
 	background: #009DE9;
-	padding-top: 19.55px;
+	padding-top: 10px;
 }
 .footer__row {
 	display: flex;
