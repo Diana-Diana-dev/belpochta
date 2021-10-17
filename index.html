@@ -20,7 +20,7 @@
 			<div class="date" id="current_date_block"></div>
 		</header>
 
-		<main class="main">
+		<main class="main" id="main">
 			<section class="slider">
 				<div class="item">
 				    <div class="slider__item1">
@@ -43,36 +43,102 @@
 			</section>
 
 
-			<section class="main-menu">
+			<!-- <section  onload="getPageContent('procedures');" class="main-menu" id="content">
 				<div class="main-menu__row1">
-					<a href="" class="main-menu__block">
+					<a href="#" onclick="getPageContent('procedures')" class="main-menu__block">
 						<h3 class="main-menu__block_text">АДМИНИСТРАТИВНЫЕ ПРОЦЕДУРЫ</h3>
 						<div class="main-menu__block_icon">
-							<img src="img/icon1.svg" alt="icon">
+							<img src="img/icon_1.png" alt="icon">
 						</div>
 					</a>
-					<a href="" class="main-menu__block">
+					<a href="#" onclick="getPageContent('management')" class="main-menu__block">
 						<h3 class="main-menu__block_text">РУКОВОДСТВО</h3>
 						<div class="main-menu__block_icon">
-							<img src="img/icon2.svg" alt="icon">
+							<img src="img/icon_2.png" alt="icon">
 						</div>
 					</a>
-					<a href="" class="main-menu__block">
+					<a href="#" onclick="getPageContent('schedule')" class="main-menu__block">
 						<h3 class="main-menu__block_text">ГРАФИК ПРИЁМА</h3>
 						<div class="main-menu__block_icon">
-							<img src="img/icon3.svg" alt="icon">
+							<img src="img/icon_3.png" alt="icon">
 						</div>
 					</a>
 				</div>
 				<div class="main-menu__row2">
-					<a href="" class="main-menu__block">
+					<a href="#" onclick="getPageContent('structure')" class="main-menu__block">
 						<h3 class="main-menu__block_text">СТРУКТУРА</h3>
 						<div class="main-menu__block_icon">
-							<img src="img/icon4.svg" alt="icon">
+							<img src="img/icon_4.png" alt="icon">
+						</div>
+					</a>
+				</div>
+			</section> -->
+			<section class="main-menu" id="home">
+				<div class="main-menu__row1">
+					<a href="#" onclick="getPageContent()" class="main-menu__block">
+						<h3 class="main-menu__block_text">АДМИНИСТРАТИВНЫЕ ПРОЦЕДУРЫ</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon_1.png" alt="icon">
+						</div>
+					</a>
+					<a href="#" class="main-menu__block">
+						<h3 class="main-menu__block_text">РУКОВОДСТВО</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon_2.png" alt="icon">
+						</div>
+					</a>
+					<a href="#" class="main-menu__block">
+						<h3 class="main-menu__block_text">ГРАФИК ПРИЁМА</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon_3.png" alt="icon">
+						</div>
+					</a>
+				</div>
+				<div class="main-menu__row2">
+					<a href="#" class="main-menu__block">
+						<h3 class="main-menu__block_text">СТРУКТУРА</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon_4.png" alt="icon">
 						</div>
 					</a>
 				</div>
 			</section>
+
+
+			<!-- <section id="procedures" class="second-menu">
+				<div class="second-menu_flex">
+					<h3 class="second-menu__h3">Административные процедуры</h3>
+					<a id="back" class="back" href="#"></a>
+				</div>
+				<div class="main-menu__row1">
+					<a href="#" class="main-menu__block">
+						<h3 class="main-menu__block_text">процедура 1</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon.png" alt="icon">
+						</div>
+					</a>
+					<a href="#"class="main-menu__block">
+						<h3 class="main-menu__block_text">процедура 2</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon.png" alt="icon">
+						</div>
+					</a>
+					<a href="#"class="main-menu__block">
+						<h3 class="main-menu__block_text">процедура 3</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon.png" alt="icon">
+						</div>
+					</a>
+				</div>
+				<div class="main-menu__row2">
+					<a href="#" class="main-menu__block">
+						<h3 class="main-menu__block_text">процедура 4</h3>
+						<div class="main-menu__block_icon">
+							<img src="img/icon.png" alt="icon">
+						</div>
+					</a>
+				</div>
+			</section> -->
 
 		</main>
 
@@ -92,7 +158,8 @@
 		</footer>
 
 	
-	<script src="js/script.js"></script>	
+	<script src="js/script.js"></script>
+	<script src="js/menu_toggle.js"></script>	
 	
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
