@@ -57,7 +57,18 @@ a{
 	text-align: right;
 	display: flex;
 	justify-content: flex-end;
+	
+}
+.change-lang {
 	margin-right: 60px;
+	outline: none;
+	border: none;
+	width: 60px;
+	height: 40px;
+	border-radius: 5px;
+	background: #009DE9;
+	color: #FFFFFF;
+	font-size: 22px;
 }
 .booked-wzsp-prime-data .booked-wzsp-day-val {
 	color: #FFFFFF;
@@ -65,7 +76,9 @@ a{
 .main {
 
 }
-
+.h1 {
+	display: none;
+}
 /* сам слайдер */
 .slider{
 	position: relative;
@@ -174,14 +187,14 @@ a{
 
 /*MAIN MENU*/
 
-#home {
+.main-menu {
 	display: block;
 	width: 1080px;
 	height: 1069px;
 	background: url('../img/fon_main_menu.png') 0 0/ 100% no-repeat;
-	padding-top: 60px;
+	
 }
-#procedures {
+.second-menu {
 	
 	width: 1080px;
 	height: 1069px;
@@ -205,6 +218,26 @@ a{
 	margin-bottom: 30px;
 	margin-left: 350px;
 }
+.second-menu__text {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	letter-spacing: 0.02em;
+	font-feature-settings: 'tnum' on, 'lnum' on;
+	color: #2C2C33;
+	margin: 0 98px;
+}
+.homelink {
+	margin-left: 30px;
+	width: 40px;
+	height: 40px;
+	left: 0;
+	top: 0;
+	background: url(../img/home.png) 100%  no-repeat;
+	background-size: cover;
+}
 .back {
 	margin-left: auto;
 	margin-right: 30px;
@@ -220,6 +253,7 @@ a{
 	padding: 0 55px;
 	justify-content: space-between;
 	margin-bottom: 35px;
+	padding-top: 60px;
 }
 .main-menu__row2 {
 	display: flex;
