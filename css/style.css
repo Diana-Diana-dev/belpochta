@@ -63,12 +63,20 @@ a{
 	margin-right: 60px;
 	outline: none;
 	border: none;
-	width: 60px;
+	width: 70px;
 	height: 40px;
 	border-radius: 5px;
 	background: #009DE9;
 	color: #FFFFFF;
-	font-size: 22px;
+	/*font-size: 22px;*/
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 41px;
+	letter-spacing: 0.02em;
+	font-feature-settings: 'tnum' on, 'lnum' on;
+	
 }
 .booked-wzsp-prime-data .booked-wzsp-day-val {
 	color: #FFFFFF;
@@ -119,7 +127,11 @@ a{
     margin-top: -35px;
     border-radius: 50%;
     display: block;
- }   
+ } 
+.slider .prev:active, .slider .next:active {
+	transform: scale(1.2);
+	transition: 0.5s;
+}  
 .slider .prev::after {
 	content: '';
 	display: inline-block;
