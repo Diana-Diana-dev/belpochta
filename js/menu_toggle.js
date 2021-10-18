@@ -1,5 +1,77 @@
 
 var home = document.getElementById('home');
+const langArr = {
+	"unit"      :  {
+		    "ru":  "Белпочта",
+            "en":  "Belpochta",
+	},
+	"procedures":  {
+			"ru": "административные процедуры",
+			"en": "administrative procedures",
+	},
+	"management":  {
+			"ru":  "руководство",
+			"en":  "management",
+	},
+	"schedule"  :  {
+			"ru":  "график приёма",
+			"en":  "appointment schedule",
+	},
+	"structure" :  {
+			"ru":  "структура",
+			"en":  "structure",
+	},
+	"operator"  :  {
+			"ru":  "Национальный оператор почтовой связи Республики Беларусь",
+			"en":  "National postal operator of the Republic of Belarus",
+	},
+	"goods"     :  {
+			"ru":  "Покупайте белорусские товары на shop.belpost.by",
+			"en":  "Buy Belarusian goods at shop.belpost.by",
+	},
+	"company"   :  {
+			"ru":  "Разработано компанией",
+			"en":  "Developed by",
+	},
+}
+const select = document.querySelector('select');
+const allLang = ['en', 'ru']
+select.addEventListener('change', changeURLLanguage);
+
+function changeURLLanguage() {
+	let lang = select.value;
+	location.href = window.location.pathname + '#' + lang;
+	location.reload();
+}
+function changeLanguage() {
+	let hash = window.location.hash;
+	hash = hash.substr(1);
+	console.log(hash);
+	if (!allLang.includes(hash)){
+		location.href = window.location.pathname + '#ru';
+		location.reload();
+	}
+	select.value = hash;
+	document.querySelector("title").innerHTML = langArr["unit"][hash];
+	document.querySelector(".lng-procedures").innerHTML = langArr["procedures"][hash];
+	document.querySelector(".lng-management").innerHTML = langArr["management"][hash];
+	document.querySelector(".lng-schedule").innerHTML = langArr["schedule"][hash];
+	document.querySelector(".lng-structure").innerHTML = langArr["structure"][hash];
+	document.querySelector(".lng-operator").innerHTML = langArr["operator"][hash];
+	document.querySelector(".lng-goods").innerHTML = langArr["goods"][hash];
+	document.querySelector(".lng-company").innerHTML = langArr["company"][hash];
+
+	// for (let key in langArr){
+	// 	document.querySelector(".lng-" + key).innerHTML = langArr[key][hash];
+	// }
+}
+changeLanguage();
+
+
+
+
+
+
 var procedures = document.getElementById('procedures');
 var back = document.getElementById('back');
 var homelink = document.getElementById('homelink');
@@ -7,7 +79,7 @@ var homelink = document.getElementById('homelink');
 function getPageContent() {
 	home.innerHTML = `<section id="procedures" class="second-menu">
 				<div class="second-menu_flex">
-					<h3 class="second-menu__h3">Административные процедуры</h3>
+					<h3 class="lng-procedures second-menu__h3">Административные процедуры</h3>
 					<a id="back" class="back" href="#" onclick="goBack()"></a>
 				</div>
 				<div class="main-menu__row1">
@@ -46,9 +118,9 @@ function getPageContent() {
 function getPageContent1() {
 	home.innerHTML = `<section class="second-menu" >
 				<div class="second-menu_flex">
-					<a  href="#" onclick="home()" id="homelink" class="homelink"></a>
+					<a  href="#"  onclick="goBack()" id="homelink" class="homelink"></a>
 					<h3 class="second-menu__h3">Страница 1</h3>
-					<a id="back" class="back" href="#" onclick="goBack()"></a>
+					<a  href="#" onclick="goBack1()" id="back" class="back"></a>
 				</div>	
 					<p class="second-menu__text">Учитывая ключевые сценарии поведения, высокое качество позиционных исследований влечет за собой процесс внедрения и модернизации вывода текущих активов. Но тщательные исследования конкурентов могут быть разоблачены. Современные технологии достигли такого уровня, что граница обучения кадров позволяет оценить значение новых предложений. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: выбранный нами инновационный путь влечет за собой процесс внедрения и модернизации форм воздействия. Есть над чем задуматься: непосредственные участники технического прогресса и по сей день остаются уделом либералов, которые жаждут быть разоблачены. Значимость этих проблем настолько очевидна, что базовый вектор развития однозначно фиксирует необходимость кластеризации усилий. В своём стремлении повысить качество жизни, они забывают, что убеждённость некоторых оппонентов, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для укрепления моральных ценностей. Не следует, однако, забывать, что базовый вектор развития является качественно новой ступенью существующих финансовых и административных условий. Вот вам яркий пример современных тенденций - сложившаяся структура организации предопределяет высокую востребованность инновационных методов управления процессами. Господа, перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса существующих финансовых и административных условий. Приятно, граждане, наблюдать, как активно развивающиеся страны третьего мира смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Следует отметить, что выбранный нами инновационный путь создаёт предпосылки для инновационных методов управления процессами.</p>
 				
@@ -88,33 +160,37 @@ function goBack() {
 			</section>`
 }
 
-	function home() {
-	home.innerHTML = `<section class="main-menu" id="home">
+	function goBack1() {
+	home.innerHTML = `<section id="procedures" class="second-menu">
+				<div class="second-menu_flex">
+					<h3 class="second-menu__h3">Административные процедуры</h3>
+					<a id="back" class="back" href="#" onclick="goBack()"></a>
+				</div>
 				<div class="main-menu__row1">
-					<a href="#" onclick="getPageContent()" class="main-menu__block">
-						<h3 class="main-menu__block_text">АДМИНИСТРАТИВНЫЕ ПРОЦЕДУРЫ</h3>
+					<a href="#" class="main-menu__block" onclick="getPageContent1()">
+						<h3 class="main-menu__block_text">процедура 1</h3>
 						<div class="main-menu__block_icon">
-							<img src="img/icon_1.png" alt="icon">
+							<img src="img/icon.png" alt="icon">
 						</div>
 					</a>
-					<a href="#" class="main-menu__block">
-						<h3 class="main-menu__block_text">РУКОВОДСТВО</h3>
+					<a href="#"class="main-menu__block">
+						<h3 class="main-menu__block_text">процедура 2</h3>
 						<div class="main-menu__block_icon">
-							<img src="img/icon_2.png" alt="icon">
+							<img src="img/icon.png" alt="icon">
 						</div>
 					</a>
-					<a href="#" class="main-menu__block">
-						<h3 class="main-menu__block_text">ГРАФИК ПРИЁМА</h3>
+					<a href="#"class="main-menu__block">
+						<h3 class="main-menu__block_text">процедура 3</h3>
 						<div class="main-menu__block_icon">
-							<img src="img/icon_3.png" alt="icon">
+							<img src="img/icon.png" alt="icon">
 						</div>
 					</a>
 				</div>
 				<div class="main-menu__row2">
 					<a href="#" class="main-menu__block">
-						<h3 class="main-menu__block_text">СТРУКТУРА</h3>
+						<h3 class="main-menu__block_text">процедура 4</h3>
 						<div class="main-menu__block_icon">
-							<img src="img/icon_4.png" alt="icon">
+							<img src="img/icon.png" alt="icon">
 						</div>
 					</a>
 				</div>
